@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+	
+	function sprawdz()
+		{
+			var liczba = document.getElementById("tekstpola").value;
+			
+			if (liczba=="") document.getElementById("wynik").innerHTML="Pole jest puste. Podaj liczbę.";
+			else if (liczba>0) document.getElementById("wynik").innerHTML="Wyrażenie jest dodatnie.";
+			else if (liczba<0) document.getElementById("wynik").innerHTML="Wyrażenie ujemne.";
+			else if (liczba==0) document.getElementById("wynik").innerHTML="Wyrażenie równa się 0.";			
+			else document.getElementById("wynik").innerHTML="To nie jest liczba.";
+		}
+	
+	</script>
+</head>
+	<input type="text" id="tekstpola" />
+	<input type="submit" value="Sprawdź wyrażenie" onclick="sprawdz()"/>
+	<div id="wynik"></div>
+<body>
+</body>
+</html>
